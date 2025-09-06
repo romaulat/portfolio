@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roma's Portfolio</title>
+
+  <!--Unicons Fonts-->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+  <!--devicon icon-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+  <!--styles.css-->
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="icon" href="img/logo.ico" type="image/x-icon">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <!--Font awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+</head>
+<body>
+  <header class="header" id="header">
+    
+    <nav class="nav container">
+      <a href="#" class="nav_logo">Roma</a>
+
+      <div class="nav_menu" id="nav-menu">
+        <ul class="nav_list grid">
+          <li class="nav_item">
+            <a href="#home" class="nav_link active-link">
+              <i class="uil uil-estate nav_icon"></i> Home
+            </a>
+          </li>
+
+          <li class="nav_item">
+            <a href="#about" class="nav_link">
+              <i class="uil uil-user nav_icon"></i> About
+            </a>
+          </li>
+
+          <li class="nav_item">
+            <a href="#skills" class="nav_link">
+              <i class="uil uil-file-alt nav_icon"></i> Skills
+            </a>
+          </li>
+
+          <li class="nav_item">
+            <a href="#certifications" class="nav_link">
+            <i class="uil uil-award nav_icon"></i> Certifications
+            </a>
+          </li>
+
+          <li class="nav_item">
+            <a href="#projects" class="nav_link">
+              <i class="uil uil-scenery nav_icon"></i> Projects
+            </a>
+          </li>
+
+          <li class="nav_item">
+            <a href="#contact" class="nav_link">
+              <i class="uil uil-message nav_icon"></i> Contact
+            </a>
+          </li>
+        </ul>
+        <i class="uil uil-times nav_close" id="nav-close"></i>
+      </div>
+
+      <div class="nav_btns">
+        <!--Theme Change Button-->
+        <i class="uil uil-moon change-theme" id="theme-button"></i>
+
+        <div class="nav_toggle" id="nav-toggle">
+          <i class="uil uil-apps"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+    <!--Home-->
+    <section class="home section" id="home">
+      <div class="color-switcher">
+        <div class="switcher-btn">
+          <i class="fas fa-cog"></i>
+        </div>
+
+        <h3>Select Color</h3>
+
+        <div class="theme-buttons-container">
+          <span class="theme-buttons" data-color="340" style="background-color: #e05785;"></span>
+          <span class="theme-buttons" data-color="279" style="background-color: #b057e0;"></span>
+          <span class="theme-buttons" data-color="237" style="background-color: #575ee0;"></span>
+          <span class="theme-buttons" data-color="27" style="background-color: #e09557;"></span>
+          <span class="theme-buttons" data-color="130" style="background-color: #57e06e;"></span>
+          <span class="theme-buttons" data-color="0" style="background-color: #e05757;"></span>
+        </div>
+      </div>
+      <div class="home_container container grid">
+        <div class="home_content grid">
+          <div class="home_social">
+            <a href="https://www.linkedin.com/in/roma-alyanna-ulat-56908a284" target="_blank" class="home_social-icon">
+              <i class="uil uil-linkedin-alt"></i>
+            </a>
+
+            <a href="https://codepen.io/romaalyannau" target="_blank" class="home_social-icon">
+              <i class="uil uil-link"></i>
+            </a>
+
+          </div>
+
+          <div class="home_img">
+            <svg class="home_blob" id="svg-blob" viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg" style="width: 250px;">
+              <defs>
+                <linearGradient id="blob-gradient" x1="0" y1="0" x2="1" y2="1">
+                  <stop id="stop1" stop-color="#3366FFFF" offset="0%"></stop>
+                  <stop id="stop2" stop-color="#FF6633FF" offset="100%"></stop>
+                </linearGradient>
+              </defs>
+              <path fill="url(#blob-gradient)" d="M26.4,-32.1C33.1,-25.8,36.6,-16.4,36.3,-7.9C36,0.6,31.8,8.2,27.7,16.6C23.6,25,19.7,34.1,12.4,38.7C5.2,43.3,-5.3,43.3,-13.9,39.6C-22.6,35.9,-29.4,28.4,-33.1,20C-36.8,11.7,-37.5,2.5,-35.2,-5.4C-32.9,-13.3,-27.6,-20,-21.2,-26.3C-14.9,-32.7,-7.4,-38.8,1.2,-40.3C9.8,-41.7,19.7,-38.4,26.4,-32.1Z" width="100%" height="100%" transform="translate(50 50)" stroke-width="0" style="transition: all 0.3s ease 0s;"></path>
+              <clipPath id="blob-clip">
+                <path d="M26.4,-32.1C33.1,-25.8,36.6,-16.4,36.3,-7.9C36,0.6,31.8,8.2,27.7,16.6C23.6,25,19.7,34.1,12.4,38.7C5.2,43.3,-5.3,43.3,-13.9,39.6C-22.6,35.9,-29.4,28.4,-33.1,20C-36.8,11.7,-37.5,2.5,-35.2,-5.4C-32.9,-13.3,-27.6,-20,-21.2,-26.3C-14.9,-32.7,-7.4,-38.8,1.2,-40.3C9.8,-41.7,19.7,-38.4,26.4,-32.1Z" transform="translate(50 50)"></path>
+              </clipPath>
+              <image class="home_blob-img" x="5%" y="15%" width="100%" height="100%" clip-path="url(#blob-clip)" xlink:href="img/Roma.png" preserveAspectRatio="xMidYMid slice" />
+            </svg>
+          </div>
+
+          <div class="home_data">
+            <h1 class="home_title">Hi, I'm
+              <div class="word"></div>
+            </h1>
+            <p class="home_description">Has developed a strong foundation in web development and 
+              database management by working on a couple of group projects.
+            </p>
+            <a href="#contact" class="button button--flex">
+              Contact Me <i class="uil uil-message button_icon"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="home_scroll">
+          <a href="#about" class="home_scroll-button button--flex">
+            <i class="uil uil-mouse-alt home_scroll-mouse"></i>
+            <span class="home_scroll-name">Scroll Down</span>
+            <i class="uil uil-arrow-down home_scroll-arrow"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!--About-->
+    <section class="about section" id="about">
+      <h2 class="section_title">About Me</h2>
+      <span class="section_subtitle">My Introduction</span>
+
+      <div class="about_container container grid">
+        <img src="img/about-img.png" alt="" class="about_img">
+
+        <div class="about_class">
+          <p class="about_description">
+          A recent college graduate from the University of Batangas, I am an individual endowed with knowledge and 
+          skills in web development. My ardor for web technologies and proficiency in UI/UX design drive me to consistently deliver high-quality work.
+          </p>
+
+          <div class="about_info">
+            <div>
+              <span class="about_info-title">6</span>
+              <span class="about_info-name">Months <br> work experience </span>
+            </div>
+
+            <div>
+              <span class="about_info-title">10+</span>
+              <span class="about_info-name">Academic <br> awards and certicates</span>
+            </div>
+
+            <div>
+              <span class="about_info-title">1</span>
+              <span class="about_info-name">Company <br> worked</span>
+            </div>
+          </div> 
+
+          <div class="about_buttons">
+            <a href="pdf/Resume.pdf" class="button button--flex" target="_blank">
+              Resume<i class="uil uil-download-alt button_icon"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Skills-->
+    <section class="skills section" id="skills">
+      <h2 class="section_title">Skills</h2>
+      <span class="section_subtitle">My Technical Level</span>
+
+      <div class="skills_container container grid">
+          <!--Skills 1-->
+          <div class="skills_content skills_open">
+            <div class="skills_header">
+              <i class="uil uil-brackets-curly skills_icon"></i>
+
+              <div>
+                <h1 class="skills_title">Frontend Development</h1>
+              </div>
+
+              <i class="uil uil-angle-down skills_arrow"></i>
+            </div>
+
+            <div class="skills_list grid">
+              <div class="skills_data">
+                <div class="skills_titles">
+                  <div class="skills_img">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
+                    <h3 class="skills_name">HTML</h3>
+                  </div>
+                  <span class="skills_number">80%</span>
+                </div>
+                <div class="skills_bar">
+                  <span class="skills_percentage skills_html"></span>
+                </div>
+              </div>
+
+              <div class="skills_data">
+                <div class="skills_titles">
+                  <div class="skills_img">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
+                    <h3 class="skills_name">CSS</h3>
+                  </div>
+                  <span class="skills_number">70%</span>
+                </div>
+                <div class="skills_bar">
+                  <span class="skills_percentage skills_css"></span>
+                </div>
+              </div>
+
+              <div class="skills_data">
+                <div class="skills_titles">
+                  <div class="skills_img">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" />
+                    <h3 class="skills_name">Javascript</h3>
+                  </div>
+                  <span class="skills_number">50%</span>
+                </div>
+                <div class="skills_bar">
+                  <span class="skills_percentage skills_js"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Skills 2-->
+          <div class="skills_content skills_close">
+            <div class="skills_header">
+              <i class="uil uil-server-network skills_icon"></i>
+
+              <div>
+                <h1 class="skills_title">Backend Development</h1>
+              </div>
+
+              <i class="uil uil-angle-down skills_arrow"></i>
+            </div>
+
+            <div class="skills_list grid">
+              <div class="skills_data">
+                <div class="skills_titles">
+                  <div class="skills_img">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg" />
+                    <h3 class="skills_name">PHP</h3>
+                  </div>
+                  <span class="skills_number">60%</span>
+                </div>
+                <div class="skills_bar">
+                  <span class="skills_percentage skills_php"></span>
+                </div>
+              </div>
+
+              <div class="skills_data">
+                <div class="skills_titles">
+                  <div class="skills_img">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" />
+                    <h3 class="skills_name">MySQL</h3>
+                  </div>
+                  <span class="skills_number">70%</span>
+                </div>
+                <div class="skills_bar">
+                  <span class="skills_percentage skills_sql"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Skills 3-->
+          <div class="skills_content skills_close">
+            <div class="skills_header">
+              <i class="uil uil-sitemap skills_icon"></i>
+
+              <div>
+                <h1 class="skills_title">Framework</h1>
+              </div>
+
+              <i class="uil uil-angle-down skills_arrow"></i>
+            </div>
+
+            <div class="skills_list grid">
+              <div class="skills_data">
+                <div class="skills_titles">
+                  <div class="skills_img">
+                    <i class="devicon-laravel-plain-wordmark colored"></i>
+                    <h3 class="skills_name">Laravel</h3>
+                  </div>
+                  <span class="skills_number">50%</span>
+                </div>
+                <div class="skills_bar">
+                  <span class="skills_percentage skills_laravel"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Skills 4-->
+          <div class="skills_content skills_close">
+            <div class="skills_header">
+              <i class="uil uil-swatchbook skills_icon"></i>
+
+              <div>
+                <h1 class="skills_title">Design</h1>
+              </div>
+
+              <i class="uil uil-angle-down skills_arrow"></i>
+            </div>
+
+            <div class="skills_list grid">
+              <div class="skills_data">
+                <div class="skills_titles">
+                  <div class="skills_img">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" />
+                    <h3 class="skills_name">Figma</h3>
+                  </div>
+                  <span class="skills_number">80%</span>
+                </div>
+                <div class="skills_bar">
+                  <span class="skills_percentage skills_figma"></span>
+                </div>
+              </div>
+
+              <div class="skills_data">
+                <div class="skills_titles">
+                  <div class="skills_img">
+                    <img src="img/Justinmind.png" />
+                    <h3 class="skills_name">Justinmind</h3>
+                  </div>
+                  <span class="skills_number">70%</span>
+                </div>
+                <div class="skills_bar">
+                  <span class="skills_percentage skills_justinmind"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div>
+    </section>
+
+    <!--Qualifications-->
+    <section class="qualification section">
+      <h2 class="section_title">Qualifications</h2>
+      <span class="section_subtitle">My Personal Journey</span>
+
+      <div class="qualification_container container">
+        <div class="qualification_tabs">
+          <div class="qualification_button button--flex qualification_active" data-target='#education'>
+            <i class="uil uil-graduation-cap qualification_icon"></i>
+            Education
+          </div>
+
+          <div class="qualification_button button--flex" data-target="#work">
+            <i class="uil uil-briefcase-alt qualification_icon"></i>
+            Work
+          </div>
+        </div>
+
+        <div class="qualification_sections">
+          <!--Qualification Content 1-->
+          <div class="qualification_content qualification_active" data-content id="education">
+
+            <!--Qualification 1-->
+            <div class="qualification_data">
+              <div>
+                <h3 class="qualification_title">Elementary</h3>
+                <span class="qualification_subtitle">Achiever</span>
+                <div class="qualification_calendar">
+                  <i class="uil uil-calendar-alt"></i>
+                  2005 - 2011
+                </div>
+              </div>
+
+              <div>
+                <span class="qualification_rounder"></span>
+                <span class="qualification_line"></span>
+              </div>
+            </div>
+
+            <!--Qualification 2-->
+            <div class="qualification_data">
+              <div></div>
+
+              <div>
+                <span class="qualification_rounder"></span>
+                <span class="qualification_line"></span>
+              </div>
+
+              <div>
+                <h3 class="qualification_title">High School</h3>
+                <span class="qualification_subtitle">With Honors</span>
+                <div class="qualification_calendar">
+                  <i class="uil uil-calendar-alt"></i>
+                  2011 - 2015
+                </div>
+              </div>
+
+            </div>
+
+            <!--Qualification 3-->
+            <div class="qualification_data">
+              <div>
+                <h3 class="qualification_title">College</h3>
+                <span class="qualification_subtitle">University of Batangas
+                  <br>Bachelor of Science in Information Technology
+                  <br>Cum Laude
+                </span>
+                <div class="qualification_calendar">
+                  <i class="uil uil-calendar-alt"></i>
+                  2017 - 2023
+                </div>
+              </div>
+
+              <div>
+                <span class="qualification_rounder"></span>
+                <span class="qualification_line"></span>
+              </div>
+            </div>
+
+          </div>
+
+          <!--Qualification Content 2-->
+          <div class="qualification_content" data-content id="work">
+
+            <!--Qualification 1-->
+            <div class="qualification_data">
+              <div>
+                <h3 class="qualification_title">Customer Service Representative</h3>
+                <span class="qualification_subtitle">Alorica - Lipa</span>
+                <div class="qualification_calendar">
+                  <i class="uil uil-calendar-alt"></i>
+                  2021 - 2022
+                </div>
+              </div>
+
+              <div>
+                <span class="qualification_rounder"></span>
+                <span class="qualification_line"></span>
+              </div>
+
+            </div>
+
+            <!--Qualification 2-->
+            <div class="qualification_data">
+              <div></div>
+
+              <div>
+                <span class="qualification_rounder"></span>
+                <span class="qualification_line"></span>
+              </div>
+
+              <div>
+                <h3 class="qualification_title">Intern as Web Developer</h3>
+                <span class="qualification_subtitle">Warlen Industrial Sales Corporation</span>
+                <div class="qualification_calendar">
+                  <i class="uil uil-calendar-alt"></i>
+                  Feb 2023 - May 2023
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Certifications-->
+    <section class="certifications section" id="certifications">
+      <h2 class="section_title">Certifications</h2>
+      <span class="section_subtitle">What I acquired</span>
+
+      <div class="certifications_container container grid">
+
+        <!--Certification 1-->
+        <div class="certifications_content">
+          <div>
+            <i class="uil uil-web-grid certifications_icon"></i>
+            <h3 class="certifications_title">AWS <br> Certification</h3>
+            <span class="certifications_subtitle">AWS Academy Graduate</span>
+          </div>
+
+          <a href="https://www.credly.com/badges/56c0676d-4135-40f3-9ae6-399a298f0f35/print" class="button button--flex button--small button--link certifications_button" target="_blank">
+            View More
+            <i class="uil uil-arrow-right button_icon"></i>
+          </a>
+        </div>
+
+        <!--Certification 2-->
+        <div class="certifications_content">
+          <div>
+            <i class="uil uil-arrow certifications_icon"></i>
+            <h3 class="certifications_title">freeCodeCamp <br> Certification</h3>
+            <span class="certifications_subtitle">Responsive Web Design</span>
+          </div>
+
+          <a href="https://www.freecodecamp.org/certification/fcc15aaf96f-e49d-46b6-8f3b-1fbff1cefc8b/responsive-web-design" class="button button--flex button--small button--link certifications_button" target="_blank">
+            View More
+            <i class="uil uil-arrow-right button_icon"></i>
+          </a>
+        </div>
+
+        <!--Certification 3-->
+        <div class="certifications_content">
+          <div>
+            <i class="uil uil-keyboard-alt certifications_icon"></i>
+            <h3 class="certifications_title">Codeliber <br> Certification</h3>
+            <span class="certifications_subtitle">JS Course</span>
+          </div>
+
+          <a href="https://codeliber.com/certificates/65c1ab1333d69" class="button button--flex button--small button--link certifications_button" target="_blank">
+            View More
+            <i class="uil uil-arrow-right button_icon"></i>
+          </a>
+        </div>
+
+        <!--Certification 4-->
+        <div class="certifications_content">
+          <div>
+            <i class="uil uil-database certifications_icon"></i>
+            <h3 class="certifications_title">Testdome <br> Certification</h3>
+            <span class="certifications_subtitle">SQL</span>
+          </div>
+
+          <a href="https://www.testdome.com/certificates/bf8da2ba94ab4ccf89de17579166c434" class="button button--flex button--small button--link certifications_button" target="_blank">
+            View More
+            <i class="uil uil-arrow-right button_icon"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="load-container">
+        <div id="load-more">Load More </div>
+      </div>
+      
+    </section>
+
+    <!--projects-->
+    <section class="projects section" id="projects">
+      <h2 class="section_title">Projects</h2>
+      <span class="section_subtitle">My Recent Works</span>
+
+      <div class="projects_container container grid">
+          <!--Project 1-->
+          <div class="project_content grid">
+            <div class="project_img">
+              <img src="img/PalengkeSite_Version1.png" alt="" class="project_img">
+              <p>PalengkeSite Version 1</p>
+            </div>
+
+            <div class="project_data">
+              <h3 class="project_title">PalengkeSite Version 1</h3>
+              <p class="project_description">A website to help users sell and buy wet market products. The programming languages used
+                for this website include HTML, CSS, Javascript, and PHP.
+              </p>
+              <a href="https://drive.google.com/file/d/1d9p8j2kuCTVljzw0wUWk2ebpgyDF_BFY/view?usp=sharing" class="button button--flex button--small projects_button" target="_blank">
+                Demo
+                <i class="uil uil-arrow-right button_icon"></i>
+              </a>
+            </div>
+          </div>
+
+          <!--Project 2-->
+          <div class="project_content grid">
+            <div class="project_img">
+              <img src="img/PalengkeSite_Version2.png" alt="" class="project_img">
+              <p>PalengkeSite Version 2</p>
+            </div>
+
+            <div class="project_data">
+              <h3 class="project_title">PalengkeSite Version 2</h3>
+              <p class="project_description">An e-commerce site assisting Mabini Market Admin in managing reports and vendors to sell products. Developed using HTML, CSS, Ajax, 
+                JavaScript, Bootstrap, PHP, and Laravel Framework for organization and security.
+              </p>
+              <a href="https://palengkesite.com/" class="button button--flex button--small projects_button" target="_blank">
+                Demo
+                <i class="uil uil-arrow-right button_icon"></i>
+              </a>
+            </div>
+          </div>
+
+          <!--Project 3-->
+          <div class="project_content grid">
+            <div class="project_img">
+              <img src="img/DekaProject.png" alt="" class="project_img">
+              <p>Deka Sales Website</p>
+            </div>
+
+            <div class="project_data">
+              <h3 class="project_title">Deka Sales Website</h3>
+              <p class="project_description">A website created to promote the products and services of Warlen Industrial Sales Corporation. 
+              It was developed using HTML, CSS, Javascript, Bootstrap, and PHP.
+              </p>
+              <a href="https://wisc.warlenindustrialsalescorp.com/" class="button button--flex button--small projects_button" target="_blank">
+                Demo
+                <i class="uil uil-arrow-right button_icon"></i>
+              </a>
+            </div>
+          </div>
+      </div>
+      
+    </section>
+
+    <section class="contact section" id="contact">
+      <h2 class="section_title">Contact Me</h2>
+      <span class="section_subtitle">Get in touch for more information</span>
+
+      <div class="contact_container container grid">
+        <div>
+          <!--contact 1-->
+          <div class="contact_information">
+            <i class="uil uil-envelope contact_icon"></i>
+
+            <div>
+              <h3 class="contact_title">Email</h3>
+              <span class="contact_subtitle">romaub2017@gmail.com</span>
+            </div>
+          </div>
+
+          <!--contact 2-->
+          <div class="contact_information">
+            <i class="uil uil-map-marker contact_icon"></i>
+
+            <div>
+              <h3 class="contact_title">Country</h3>
+              <span class="contact_subtitle">Philippines</span>
+            </div>
+          </div>
+        </div>
+
+        <form action="contact.php" class="contact_form grid" method="POST">
+          <div class="contact_inputs grid">
+              <div class="contact_content">
+                  <label for="" class="contact_label">Name</label>
+                  <input type="text" class="contact_input" name="name" required>
+              </div>
+              <div class="contact_content">
+                  <label for="" class="contact_label">Email</label>
+                  <input type="email" class="contact_input" name="email" required>
+              </div>
+          </div>
+          <div class="contact_content">
+              <label for="" class="contact_label">Subject</label>
+              <input type="text" class="contact_input" name="subject" required>
+          </div>
+          <div class="contact_content">
+              <label for="" class="contact_label">Message</label>
+              <textarea name="message" id="" cols="0" rows="7" class="contact_input" required></textarea>
+          </div>
+
+          <!-- CSRF Token -->
+          <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+
+          <div>
+              <button type="submit" class="button button--flex contact_submit">
+                  <p>Send Message</p>
+                  <i class="uil uil-message button_icon"></i>
+              </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!--footer-->
+  <footer class="footer">
+    <div class="footer_bg">
+      <div class="footer_container container grid">
+        <div>
+          <h1 class="footer_title">Roma</h1>
+          <span class="footer_subtitle">Developer</span>
+        </div>
+
+        <ul class="footer_links">
+          <li>
+            <a href="#skills" class="footer_link">Skills</a>
+          </li>
+          <li>
+            <a href="#projects" class="footer_link">Projects</a>
+          </li>
+          <li>
+            <a href="#contact" class="footer_link">Contact</a>
+          </li>
+        </ul>
+
+        <div class="footer_socials">
+          <a href="https://www.facebook.com/" class="footer_social" target="_blank">
+            <i class="uil uil-facebook-f"></i>
+          </a>
+
+          <a href="https://www.instagram.com/" class="footer_social" target="_blank">
+            <i class="uil uil-instagram"></i>
+          </a>
+
+          <a href="https://www.twitter.com/" class="footer_social" target="_blank">
+            <i class="uil uil-twitter-alt"></i>
+          </a>
+        </div>
+      </div>
+
+      <p class="footer_copy">&copy; <a href="https://youtu.be/27JtRAI3QO8" class="footer_code" target="_blank">Bedimcode</a></p>
+    </div>
+  </footer>
+
+  <!--Scroll Top-->
+  <a href="#" class="scrollup" id="scroll-up">
+    <i class="uil uil-arrow-up scrollup_icon"></i>
+  </a>
+
+  <script src="js/main.js"></script>
+  
+</body>
+</html>
