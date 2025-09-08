@@ -1035,7 +1035,7 @@ img{
   }
 
   .certifications_container{
-    grid-template-columns: max-content;
+    grid-template-columns: 1fr;
     justify-content: center;
   }
 
@@ -1047,7 +1047,7 @@ img{
 
 @media screen and (max-width: 420px){
   .certifications_container{
-    grid-template-columns: max-content;
+    grid-template-columns: 1fr;
     justify-content: center;
   }
 
