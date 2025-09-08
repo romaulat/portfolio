@@ -184,19 +184,52 @@ document.querySelectorAll('.theme-buttons').forEach(color => color.addEventListe
 
 /** Load More **/
 let loadMoreBtn = document.querySelector('#load-more');
+let showLessBtn = document.querySelector('#show-less');
+let boxes = [...document.querySelectorAll('.certifications_content')];
 let currentItem = 3;
 
+// Initially hide extra items if more than 3 exist
+boxes.forEach((box, index) => {
+  if (index >= currentItem) box.style.display = 'none';
+});
+
+// Only show Load More button if there are more than 3 items
+if (boxes.length <= 3) {
+  loadMoreBtn.style.display = 'none';
+}
+
 loadMoreBtn.onclick = () => {
-  let boxes = [...document.querySelectorAll('.certifications_content')];
-  for (var i = currentItem; i < Math.min(currentItem + 3, boxes.length); i++) {
+  for (let i = currentItem; i < Math.min(currentItem + 3, boxes.length); i++) {
     boxes[i].style.display = 'inline';
   }
   currentItem += 3;
 
+  // Hide Load More button if all items are visible
   if (currentItem >= boxes.length) {
     loadMoreBtn.style.display = 'none';
   }
-}
+
+  // Show Show Less button only if there are more than 3 items
+  if (boxes.length > 3) {
+    showLessBtn.style.display = 'block';
+  }
+};
+
+showLessBtn.onclick = () => {
+  for (let i = 3; i < boxes.length; i++) {
+    boxes[i].style.display = 'none';
+  }
+
+  currentItem = 3;
+
+  // Show Load More button again if applicable
+  if (boxes.length > 3) {
+    loadMoreBtn.style.display = 'block';
+  }
+
+  // Hide Show Less button if only 3 items are visible
+  showLessBtn.style.display = 'none';
+};
 
 /*Home Name Text Animation*/
 var words = ['Roma', 'a Developer'],

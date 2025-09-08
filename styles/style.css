@@ -168,9 +168,10 @@ body.dark-theme{
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
 }
 
-#load-more{
+#load-more, #show-less{
   margin-top: 20px;
   display: inline-block;
   padding: 13px 30px;
@@ -180,7 +181,7 @@ body.dark-theme{
   cursor: pointer;
 }
 
-#load-more:hover{
+#load-more:hover, #show-less:hover{
   background-color: var(--first-color);
   border-color: var(--first-color);
 }
