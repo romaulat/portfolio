@@ -1211,7 +1211,7 @@ img{
 
 @media screen and (min-width: 600px){
   .home_content{
-    grid-template-columns: max-content 1fr 1fr;
+    grid-template-columns: max-content 1.5fr 1fr;
   }
 
   .home_data{
