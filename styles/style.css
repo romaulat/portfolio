@@ -780,7 +780,7 @@ img{
   opacity: 1;
 }
 
-.project_img, .project_img_figma{
+.project_img{
   opacity: 1;
   display: block;
   width: 100%;
@@ -790,7 +790,7 @@ img{
   object-fit: cover;
 }
 
-.project_img p, .project_img_figma p{
+.project_img p{
   position: absolute;
   bottom: 0;
   background: var(--first-color);
