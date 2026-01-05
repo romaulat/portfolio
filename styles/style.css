@@ -790,6 +790,10 @@ img{
   object-fit: cover;
 }
 
+.reference{
+  color: var(--text-color);
+}
+
 .project_img p{
   position: absolute;
   bottom: 0;
