@@ -183,53 +183,68 @@ document.querySelectorAll('.theme-buttons').forEach(color => color.addEventListe
 }));
 
 /** Load More **/
-let loadMoreBtn = document.querySelector('#load-more');
-let showLessBtn = document.querySelector('#show-less');
-let boxes = [...document.querySelectorAll('.certifications_content')];
-let currentItem = 3;
+function loadMoreHandler({
+  itemsSelector,
+  loadMoreBtnSelector,
+  showLessBtnSelector,
+  visibleCount = 3
+}) {
+  const loadMoreBtn = document.querySelector(loadMoreBtnSelector);
+  const showLessBtn = document.querySelector(showLessBtnSelector);
+  const boxes = [...document.querySelectorAll(itemsSelector)];
 
-// Initially hide extra items if more than 3 exist
-boxes.forEach((box, index) => {
-  if (index >= currentItem) box.style.display = 'none';
-});
+  let currentItem = visibleCount;
 
-// Only show Load More button if there are more than 3 items
-if (boxes.length <= 3) {
-  loadMoreBtn.style.display = 'none';
-}
+  // Hide extra items initially
+  boxes.forEach((box, index) => {
+    if (index >= visibleCount) box.style.display = 'none';
+  });
 
-loadMoreBtn.onclick = () => {
-  for (let i = currentItem; i < Math.min(currentItem + 3, boxes.length); i++) {
-    boxes[i].style.display = 'inline';
-  }
-  currentItem += 3;
-
-  // Hide Load More button if all items are visible
-  if (currentItem >= boxes.length) {
+  // Hide Load More if not needed
+  if (boxes.length <= visibleCount) {
     loadMoreBtn.style.display = 'none';
   }
 
-  // Show Show Less button only if there are more than 3 items
-  if (boxes.length > 3) {
+  loadMoreBtn.onclick = () => {
+    for (let i = currentItem; i < Math.min(currentItem + visibleCount, boxes.length); i++) {
+      boxes[i].style.display = 'grid'; // project cards use grid
+    }
+    currentItem += visibleCount;
+
+    if (currentItem >= boxes.length) {
+      loadMoreBtn.style.display = 'none';
+    }
+
     showLessBtn.style.display = 'block';
-  }
-};
+  };
 
-showLessBtn.onclick = () => {
-  for (let i = 3; i < boxes.length; i++) {
-    boxes[i].style.display = 'none';
-  }
+  showLessBtn.onclick = () => {
+    boxes.forEach((box, index) => {
+      if (index >= visibleCount) box.style.display = 'none';
+    });
 
-  currentItem = 3;
-
-  // Show Load More button again if applicable
-  if (boxes.length > 3) {
+    currentItem = visibleCount;
     loadMoreBtn.style.display = 'block';
-  }
+    showLessBtn.style.display = 'none';
+  };
+}
 
-  // Hide Show Less button if only 3 items are visible
-  showLessBtn.style.display = 'none';
-};
+// Certifications
+loadMoreHandler({
+  itemsSelector: '.certifications_content',
+  loadMoreBtnSelector: '#load-more',
+  showLessBtnSelector: '#show-less',
+  visibleCount: 3
+});
+
+// Projects
+loadMoreHandler({
+  itemsSelector: '.project_content',
+  loadMoreBtnSelector: '#projects-load-more',
+  showLessBtnSelector: '#projects-show-less',
+  visibleCount: 3 // optional: show 2 projects at a time
+});
+
 
 /*Home Name Text Animation*/
 var words = ['Roma', 'a Developer'],

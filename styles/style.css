@@ -171,7 +171,7 @@ body.dark-theme{
   gap: 10px;
 }
 
-#load-more, #show-less{
+#load-more, #show-less, #projects-load-more, #projects-show-less{
   margin-top: 20px;
   display: inline-block;
   padding: 13px 30px;
@@ -181,7 +181,7 @@ body.dark-theme{
   cursor: pointer;
 }
 
-#load-more:hover, #show-less:hover{
+#load-more:hover, #show-less:hover, #projects-load-more:hover, #projects-show-less:hover{
   background-color: var(--first-color);
   border-color: var(--first-color);
 }
@@ -823,6 +823,7 @@ img{
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 100%;
   align-items: center;
   justify-content: center;
   padding: 15px;
