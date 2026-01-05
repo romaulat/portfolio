@@ -829,6 +829,13 @@ img{
   padding: 15px;
 }
 
+.btns-center{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
 /*Success or Error*/
 #message-status{
   text-align: center;
